@@ -1,0 +1,57 @@
+/* Home Page Styling */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: white;
+  }
+  
+  .home-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .home-description {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+  }
+  
+  /* CTA Button Styling */
+  .cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: #333;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #222;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .home-title {
+      font-size: 2.5rem;
+    }
+    .home-description {
+      font-size: 1.1rem;
+    }
+    .cta-button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  

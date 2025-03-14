@@ -1,0 +1,87 @@
+/* Pricing Page Styling */
+.pricing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: white;
+  }
+  
+  .pricing-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Pricing List */
+  .pricing-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+  }
+  
+  /* Pricing Card */
+  .pricing-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .pricing-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Pricing Price */
+  .pricing-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  /* Pricing Features */
+  .pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  .pricing-features li {
+    margin: 5px 0;
+  }
+  
+  /* Pricing Button */
+  .pricing-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .pricing-button:hover {
+    background-color: #222;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .pricing-title {
+      font-size: 2.5rem;
+    }
+    .pricing-card {
+      width: 90%;
+    }
+  }
+  

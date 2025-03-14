@@ -1,0 +1,145 @@
+/* RegisterUser.css */
+
+.register-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #0056b3;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0056b3;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #004080;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #0056b3;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.success-message {
+  color: green;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .register-container {
+      padding: 15px;
+  }
+
+  h2 {
+      font-size: 22px;
+  }
+
+  input, button {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .loading-spinner {
+      width: 20px;
+      height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+      width: 100%;
+      margin: 20px;
+  }
+
+  h2 {
+      font-size: 20px;
+  }
+
+  input, button {
+      font-size: 12px;
+      padding: 8px;
+  }
+
+  .loading-spinner {
+      width: 18px;
+      height: 18px;
+  }
+
+  .success-message, .error-message {
+      font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .register-container {
+      max-width: 500px;
+  }
+
+  h2 {
+      font-size: 26px;
+  }
+
+  input, button {
+      font-size: 18px;
+      padding: 14px;
+  }
+}

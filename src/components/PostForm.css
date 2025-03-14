@@ -1,0 +1,73 @@
+/* PostForm.css */
+
+/* Container for the form */
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Input and textarea fields styling */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+/* Focus effect */
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #4A90E2;
+    outline: none;
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Submit button styling */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #4A90E2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #357ABD;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 15px;
+    }
+}
