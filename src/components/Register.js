@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";  // Import useNavigate from react-router-dom
 import "./Register.css";
 
 const Register = () => {
@@ -11,11 +10,10 @@ const Register = () => {
     password: "",
   });
 
+  
+
   const [message, setMessage] = useState("");
   const [messageType, setMessageType] = useState(""); // 'success' or 'error'
-  
-  // Set up navigate function
-  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -26,18 +24,14 @@ const Register = () => {
     try {
       // Send registration request
       const response = await axios.post("http://127.0.0.1:8000/api/register/", formData);
+      console.log(response);  // Use 'response' to avoid the warning
       
       // If registration is successful, set the success message
       setMessage("Registration Successful!");
       setMessageType("success");
-
+      
       // Clear form data
       setFormData({ username: "", email: "", password: "" });
-
-      // Redirect the user to the home screen
-      setTimeout(() => {
-        navigate("/");  // Redirect to the home screen after successful registration
-      }, 2000);  // You can add a delay to let the user see the success message first
 
       // Clear the success message after 5 seconds
       setTimeout(() => {

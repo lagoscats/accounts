@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';  // Import useNavigate
 import './RegisterUser.css'; // Ensure this matches the file's actual name
 
 const RegisterUser = () => {
@@ -11,6 +12,8 @@ const RegisterUser = () => {
     const [loading, setLoading] = useState(false); // State for loading indicator
     const [message, setMessage] = useState('');
     const [messageType, setMessageType] = useState(''); // 'success' or 'error'
+
+    const navigate = useNavigate();  // Initialize the navigate function
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -32,6 +35,11 @@ const RegisterUser = () => {
             if (response.status === 201) {
                 setMessage('Registration successful!');
                 setMessageType('success');
+
+                // Redirect to home screen after a successful registration
+                setTimeout(() => {
+                    navigate('/');  // Redirect to the home screen
+                }, 2000);  // Delay to allow the success message to be shown
             }
         } catch (error) {
             setMessage('Error creating user: ' + (error.response ? error.response.data.detail : 'Please try again.'));
